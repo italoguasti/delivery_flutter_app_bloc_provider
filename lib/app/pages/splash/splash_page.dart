@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -10,6 +8,18 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Splash'),
+      ),
+      body: Column(
+        children: [
+          Container(),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Test'),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(labelText: 'text'),
+          ),
+        ],
       ),
     );
   }
