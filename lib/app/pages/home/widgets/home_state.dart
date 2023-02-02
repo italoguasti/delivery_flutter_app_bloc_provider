@@ -2,6 +2,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:match/match.dart';
 
+import 'package:dw_delivery_app/app/dto/order_product_dto.dart';
 import 'package:dw_delivery_app/app/models/product_model.dart';
 
 part 'home_state.g.dart';
@@ -18,30 +19,35 @@ class HomeState extends Equatable {
   final HomeStateStatus status;
   final List<ProductModel> products;
   final String? errorMessage;
+  final List<OrderProductDto> shoppingBag;
 
   const HomeState(
     this.status,
     this.products,
     this.errorMessage,
+    this.shoppingBag,
   );
 
   HomeState.initial()
       : status = HomeStateStatus.initial,
         products = [],
+        shoppingBag = [],
         errorMessage = null;
 
   @override
-  List<Object?> get props => [status, products];
+  List<Object?> get props => [status, products, errorMessage, shoppingBag];
 
   HomeState copyWith({
     HomeStateStatus? status,
     List<ProductModel>? products,
     String? errorMessage,
+    List<OrderProductDto>? shoppingBag,
   }) {
     return HomeState(
       status ?? this.status,
       products ?? this.products,
       errorMessage ?? this.errorMessage,
+      shoppingBag ?? this.shoppingBag,
     );
   }
 }

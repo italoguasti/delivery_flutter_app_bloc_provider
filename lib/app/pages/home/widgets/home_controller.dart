@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:dw_delivery_app/app/dto/order_product_dto.dart';
 import 'package:dw_delivery_app/app/repositories/products/products_repository.dart';
 
 import 'home_state.dart';
@@ -19,7 +20,15 @@ class HomeController extends Cubit<HomeState> {
       emit(state.copyWith(status: HomeStateStatus.loaded, products: products));
     } catch (e, s) {
       log('Erro ao buscar produtos', error: e, stackTrace: s);
-      emit(state.copyWith(status: HomeStateStatus.error, errorMessage: 'Erro ao buscar produtos'));
+      emit(state.copyWith(
+          status: HomeStateStatus.error,
+          errorMessage: 'Erro ao buscar produtos'));
     }
+  }
+
+  void addOrUpdateBag(OrderProductDto orderProduct) {
+    final shoppingBag = [...state.shoppingBag];
+    shoppingBag.add(orderProduct);
+    emit(state.copyWith(shoppingBag: shoppingBag));
   }
 }
