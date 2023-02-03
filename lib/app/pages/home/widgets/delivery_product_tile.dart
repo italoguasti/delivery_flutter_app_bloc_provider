@@ -7,7 +7,8 @@ import 'package:dw_delivery_app/app/core/ui/styles/colors_app.dart';
 import 'package:dw_delivery_app/app/core/ui/styles/text_styles.dart';
 import 'package:dw_delivery_app/app/dto/order_product_dto.dart';
 import 'package:dw_delivery_app/app/models/product_model.dart';
-import 'package:dw_delivery_app/app/pages/home/widgets/home_controller.dart';
+
+import '../home_controller.dart';
 
 class DeliveryProductTile extends StatelessWidget {
   final ProductModel product;
