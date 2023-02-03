@@ -5,6 +5,7 @@ import 'package:dw_delivery_app/app/pages/product_detail/product_detail_router.d
 import 'package:dw_delivery_app/app/pages/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/auth/register/register_page.dart';
 import 'pages/home/home_router.dart';
 
 class DwDeliveryApp extends StatelessWidget {
@@ -21,6 +22,7 @@ class DwDeliveryApp extends StatelessWidget {
           '/home': (context) => HomeRouter.page,
           '/productDetail': (context) => ProductDetailRouter.page,
           '/auth/login': (context) => const LoginPage(),
+          '/auth/register': (context) => const RegisterPage(),
         },
       ),
     );
