@@ -1,6 +1,8 @@
 # dw_delivery_app
 
-A new Flutter project.
+A flutter project created in a week of intensive, using:
+
+  - Bloc
 
 ## Getting Started
 
