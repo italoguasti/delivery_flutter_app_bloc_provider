@@ -3,6 +3,7 @@
 A flutter project created in a week of intensive, using:
 
   - Bloc
+  - Provider
 
 ## Getting Started
 
